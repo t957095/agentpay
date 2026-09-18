@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AgentPay — Micropayments for the AI agent economy</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; font-family: ui-monospace, Menlo, Consolas, monospace; background: #0b0e14; color: #e6e9ef; }
+  main { max-width: 760px; margin: 0 auto; padding: 48px 20px 80px; }
+  h1 { font-size: 40px; margin: 0 0 8px; background: linear-gradient(90deg,#9945FF,#14F195); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  h2 { margin-top: 40px; font-size: 18px; color: #14F195; }
+  p, li { line-height: 1.7; color: #aab2c0; }
+  code, pre { background: #151a23; border-radius: 6px; }
+  code { padding: 2px 6px; color: #14F195; }
+  pre { padding: 16px; overflow-x: auto; font-size: 13px; color: #c8d0dd; border: 1px solid #232b3a; }
+  .card { border: 1px solid #232b3a; border-radius: 12px; padding: 20px; margin: 16px 0; background: #10141c; }
+  .step { display: flex; gap: 12px; margin: 10px 0; }
+  .n { color: #9945FF; font-weight: bold; }
+  a { color: #14F195; }
+</style>
+</head>
+<body>
+<main>
+  <h1>AgentPay ⚡🤖</h1>
+  <p><strong>Pay-per-request for APIs, settled on Solana in under a second.</strong><br>
+  AI agents can't pass KYC or hold credit cards. AgentPay turns any endpoint into a paid endpoint with 3 lines of code — the transaction <em>is</em> the credential.</p>
+
+  <h2>Live devnet demo</h2>
+  <div class="card">
+    <div class="step"><span class="n">1</span><span>Agent requests <code>GET /api/brief</code> → server answers <code>402 Payment Required</code> with payment instructions.</span></div>
+    <div class="step"><span class="n">2</span><span>Agent signs a 5,000-lamport transfer with a unique memo on Solana devnet.</span></div>
+    <div class="step"><span class="n">3</span><span>Agent retries with the tx signature → gateway verifies amount + memo on-chain → data served.</span></div>
+    <p>Run it yourself:</p>
+    <pre>npm install
+AGENTPAY_MERCHANT=&lt;devnet-address&gt; npm run demo
+npm run agent -- http://localhost:3402/api/brief</pre>
+  </div>
+
+  <h2>Why Solana</h2>
+  <p>Sub-second finality and sub-$0.001 fees make Solana the only chain where machine-to-machine micropayments clear economically. No accounts, no API keys, no chargebacks.</p>
+
+  <h2>Business model</h2>
+  <div class="card">
+    <div class="step"><span class="n">→</span><span>Open-source SDK drives adoption.</span></div>
+    <div class="step"><span class="n">→</span><span>Hosted gateway (verify-as-a-service + analytics) takes 0.5% per settled request.</span></div>
+    <div class="step"><span class="n">→</span><span>First customers: Solana-ecosystem APIs and AI-agent projects — dozens being built on Superteam Earn today.</span></div>
+  </div>
+
+  <h2>Status</h2>
+  <p>402 challenge/verify core and autonomous agent client running on devnet. USDC payments and hosted dashboard in progress.</p>
+
+  <p style="margin-top:40px">Built for the <strong>Colosseum Crypto World's Fair Hackathon — Superteam Vietnam Track</strong>.</p>
+</main>
+</body>
+</html>
