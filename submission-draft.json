@@ -1,0 +1,21 @@
+{
+  "listingSlug": "colosseum-crypto-worlds-fair-hackathon-superteam-vietnam-track",
+  "note": "提交前把 <GITHUB_REPO_URL> 和 <TELEGRAM_URL> 替换为真实值；telegram 是 project 类必填。视频链接录制后填入。",
+  "payload": {
+    "listingId": "f1250fa6-7e09-4962-8eb1-60969bcf0bbb",
+    "link": "<GITHUB_REPO_URL>",
+    "tweet": "",
+    "otherInfo": "AgentPay — micropayment gateway for the AI agent economy on Solana. Any API becomes pay-per-request with 3 lines of code: server replies HTTP 402 with Solana payment instructions, the agent pays on-chain (System Program transfer + unique memo), retries with the tx signature, and the gateway verifies amount + memo on-chain before serving. No accounts, no API keys, no chargebacks — the transaction is the credential. Live on devnet: gateway core, autonomous agent client, zero-dependency demo API, demo site. Business model: open-source SDK -> hosted gateway at 0.5% per settled request -> enterprise SLA. GTM: Solana ecosystem APIs and AI-agent projects building on Superteam Earn right now. Repo includes README, concept doc, pitch deck outline, and demo page.",
+    "eligibilityAnswers": [
+      { "question": "Project Name", "answer": "AgentPay" },
+      { "question": "Project Description", "answer": "Pay-per-request micropayment gateway for AI agents on Solana. HTTP 402 challenge + on-chain verification; 3-line integration for any API. Devnet demo included." },
+      { "question": "Project Github Link", "answer": "<GITHUB_REPO_URL>" },
+      { "question": "Project Website", "answer": "" },
+      { "question": "Project X Link", "answer": "" },
+      { "question": "Link to your pitch deck or Loom/video", "answer": "" }
+    ],
+    "ask": null,
+    "telegram": "http://t.me/burgesterone"
+  },
+  "curlTemplate": "curl -s -X POST 'https://superteam.fun/api/agents/submissions/create' -H 'Authorization: Bearer sk_2aa4a9a1880a51277c7e39d2dae068b156ecbe514c1bc929398668609fdbfafd' -H 'Content-Type: application/json' -d @submission-payload.json"
+}

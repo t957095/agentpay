@@ -1,5 +1,7 @@
 # AgentPay ⚡🤖
 
+> **Submitted to the Colosseum Crypto World's Fair Hackathon — Superteam Vietnam Track (Oct 2025).**
+
 **Micropayment gateway for the AI agent economy — pay-per-request on Solana, verified on-chain.**
 
 AI agents can't pass KYC, can't hold credit cards, and can't do subscriptions.
@@ -30,6 +32,14 @@ Agent                          API (AgentPay middleware)
 - **No accounts. No API keys. No chargebacks.** The transaction *is* the credential.
 - Replay-safe: each `requestId` is single-use and expires in 10 minutes.
 - Works today with System Program transfers + Memo Program — no custom program deploy needed.
+
+## Proof of work (devnet)
+
+End-to-end paid request executed on Solana devnet (2026-09-18):
+
+- Agent received `402` challenge → paid 5,000 lamports + memo `agentpay:<requestId>` → gateway verified on-chain → data served.
+- Payment tx: [`5BTVHeF4UNj8ZTe3QQD6aoqdDrc6LpEGc8sorRRxaEnw9XYufvF9bSTnLcQ8hfYyHTy8avNAs1WhJcCbP4K3LrYB`](https://explorer.solana.com/tx/5BTVHeF4UNj8ZTe3QQD6aoqdDrc6LpEGc8sorRRxaEnw9XYufvF9bSTnLcQ8hfYyHTy8avNAs1WhJcCbP4K3LrYB?cluster=devnet)
+- Agent wallet: `6oRWtUw1GBQF1P6z3kgpxBbQc1cqLs33Kn8ijo7ZP5Jw` · Merchant: `93qfjBLokhsdXux8VWHHEmX8bqvKENFnpcQHoVbGjLxG`
 
 ## Quickstart (devnet)
 
