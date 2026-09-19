@@ -1,5 +1,7 @@
 # AgentPay ⚡🤖
 
+<p align="center"><img src="docs/logo.png" width="160" alt="AgentPay logo"></p>
+
 > **Submitted to the Colosseum Crypto World's Fair Hackathon — Superteam Vietnam Track (Oct 2025).**
 
 **Micropayment gateway for the AI agent economy — pay-per-request on Solana, verified on-chain.**
